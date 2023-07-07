@@ -9,6 +9,8 @@
     
     <title>
         
+            指针、数组、字符串的恩怨 |
+        
         LH&#39;s Blog
     </title>
     
@@ -162,7 +164,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation"></span>
+                <span class="title-hover-animation">指针、数组、字符串的恩怨</span>
             </div>
 
             
@@ -188,7 +190,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-07-07 10:47:11</span>
+        <span class="pc">2023-07-07 10:52:15</span>
     </span>
     
     
@@ -242,12 +244,12 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h2 id="内存组成"><a href="#内存组成" class="headerlink" title="内存组成"></a>内存组成</h2><p>为了讲明白不同方式下数组、字符串定义时在内存中的存放方式，需要先对计算机内存分区组成有所了解：</p>
+                <h1 id="指针、数组、字符串的恩怨"><a href="#指针、数组、字符串的恩怨" class="headerlink" title="指针、数组、字符串的恩怨"></a>指针、数组、字符串的恩怨</h1><h2 id="内存组成"><a href="#内存组成" class="headerlink" title="内存组成"></a>内存组成</h2><p>为了讲明白不同方式下数组、字符串定义时在内存中的存放方式，需要先对计算机内存分区组成有所了解：</p>
 <p><img  
                      lazyload
                      alt="image"
-                     data-src="/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01RMDUyMg==,size_16,color_FFFFFF,t_70.png"
-                      alt="img"
+                     data-src="https://img-blog.csdnimg.cn/20210319215715539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01RMDUyMg==,size_16,color_FFFFFF,t_70"
+                      alt="在这里插入图片描述"
                 ></p>
 <h3 id="堆区"><a href="#堆区" class="headerlink" title="堆区"></a>堆区</h3><p>**堆区 (Heap)**：由程序员手动申请释放的内存空间。</p>
 <ol>
@@ -361,7 +363,7 @@ P.S. 当然，如果一定要用二维指针作实参<code>f(char **s)</code>，
 <p><img  
                      lazyload
                      alt="image"
-                     data-src="/5e71da950188494c87e0c5b72695ddbf.png"
+                     data-src="https://img-blog.csdnimg.cn/5e71da950188494c87e0c5b72695ddbf.png"
                       alt="请添加图片描述"
                 ></p>
 <h3 id="数组结构中对“指针常量”的理解"><a href="#数组结构中对“指针常量”的理解" class="headerlink" title="数组结构中对“指针常量”的理解"></a>数组结构中对“指针常量”的理解</h3><p><strong>指针常量</strong>：不能修改指针所指向的地址，但指向的值可以改变。</p>
@@ -375,12 +377,12 @@ P.S. 当然，如果一定要用二维指针作实参<code>f(char **s)</code>，
 <p><img  
                      lazyload
                      alt="image"
-                     data-src="/cc6eef8750604f69974f2d1f0700389c.png"
+                     data-src="https://img-blog.csdnimg.cn/cc6eef8750604f69974f2d1f0700389c.png"
                       alt="请添加图片描述"
                 ><br><img  
                      lazyload
                      alt="image"
-                     data-src="/da27af676b3c4b15812b8fafab174b3f.png"
+                     data-src="https://img-blog.csdnimg.cn/da27af676b3c4b15812b8fafab174b3f.png"
                       alt="请添加图片描述"
                 ></p>
 <h2 id="One-More-Thing"><a href="#One-More-Thing" class="headerlink" title="One More Thing"></a>One More Thing</h2><p><strong>“当指针数组、<code>malloc()</code>动态分配遇见<code>qsort()</code>库函数，关于比较函数<code>cmp(const void *a, const void *b)</code>的迷思”</strong></p>
@@ -402,7 +404,7 @@ P.S. 当然，如果一定要用二维指针作实参<code>f(char **s)</code>，
 <p><img  
                      lazyload
                      alt="image"
-                     data-src="/829b98d907eb4e51947ac2026fff7503.png"
+                     data-src="https://img-blog.csdnimg.cn/829b98d907eb4e51947ac2026fff7503.png"
                       alt="请添加图片描述"
                 ></p>
 <p>为了和这篇博客主题契合，这里只介绍这种数据存储结构的实现方式与<code>cmp()</code>的设计方法：</p>
@@ -422,7 +424,7 @@ P.S. 当然，如果一定要用二维指针作实参<code>f(char **s)</code>，
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">本文标题</span>：<span class="content"></span>
+            <span class="type">本文标题</span>：<span class="content">指针、数组、字符串的恩怨</span>
         </li>
         <li class="post-author">
             <span class="type">本文作者</span>：<span class="content">Lee Hero</span>
@@ -484,7 +486,7 @@ P.S. 当然，如果一定要用二维指针作实参<code>f(char **s)</code>，
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%BB%84%E6%88%90"><span class="nav-text">内存组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%E5%8C%BA"><span class="nav-text">堆区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E5%8C%BA"><span class="nav-text">栈区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%AD%98%E5%82%A8%E5%8C%BA"><span class="nav-text">静态存储区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%8C%BA"><span class="nav-text">代码区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-text">代码示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AE%9A%E4%B9%89-%E4%B8%80%E7%BB%B4"><span class="nav-text">字符串定义 - 一维</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-text">方法二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AE%9A%E4%B9%89-%E4%BA%8C%E7%BB%B4"><span class="nav-text">字符串定义 - 二维</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-1"><span class="nav-text">方法一</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84%E7%9A%84%E8%AE%A4%E8%AF%86"><span class="nav-text">对二维数组结构的认识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="nav-text">关于二维数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%8C%87%E9%92%88%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB"><span class="nav-text">二维数组中的指针等价关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84%E4%B8%AD%E5%AF%B9%E2%80%9C%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F%E2%80%9D%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">数组结构中对“指针常量”的理解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88-vs-%E6%95%B0%E7%BB%84-%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%E4%B8%80%E5%9B%BE%E6%B5%81"><span class="nav-text">指针 vs 数组 内存结构一图流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-More-Thing"><span class="nav-text">One More Thing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2"><span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-text">输出格式</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E3%80%81%E6%95%B0%E7%BB%84%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%81%A9%E6%80%A8"><span class="nav-text">指针、数组、字符串的恩怨</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%BB%84%E6%88%90"><span class="nav-text">内存组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86%E5%8C%BA"><span class="nav-text">堆区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E5%8C%BA"><span class="nav-text">栈区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%AD%98%E5%82%A8%E5%8C%BA"><span class="nav-text">静态存储区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%8C%BA"><span class="nav-text">代码区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="nav-text">代码示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AE%9A%E4%B9%89-%E4%B8%80%E7%BB%B4"><span class="nav-text">字符串定义 - 一维</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-text">方法二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AE%9A%E4%B9%89-%E4%BA%8C%E7%BB%B4"><span class="nav-text">字符串定义 - 二维</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-1"><span class="nav-text">方法一</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84%E7%9A%84%E8%AE%A4%E8%AF%86"><span class="nav-text">对二维数组结构的认识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="nav-text">关于二维数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%8C%87%E9%92%88%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB"><span class="nav-text">二维数组中的指针等价关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%BB%93%E6%9E%84%E4%B8%AD%E5%AF%B9%E2%80%9C%E6%8C%87%E9%92%88%E5%B8%B8%E9%87%8F%E2%80%9D%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">数组结构中对“指针常量”的理解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88-vs-%E6%95%B0%E7%BB%84-%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84%E4%B8%80%E5%9B%BE%E6%B5%81"><span class="nav-text">指针 vs 数组 内存结构一图流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-More-Thing"><span class="nav-text">One More Thing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2"><span class="nav-text">题面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-text">输出格式</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </div>
 
